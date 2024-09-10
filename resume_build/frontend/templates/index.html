@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+
+<div class="header">
+
+    <div class="left_content">
+        <img src="{% static 'assets/resume.gif' %}" alt="" class="logo_img">
+        <h1> Resume </h1>
+        <span class="span"> <br>-- Builder --</span>
+    </div>
+    <div class="header_buttons">
+      {% if request.user.is_authenticated %}
+        <h2 class="user_name">{{ request.user.username }}</h2> 
+        <h3>
+         <a href="{% url 'logout_page' %}" class="log_button">Logout</a>
+        </h3> 
+      {% endif %}
+    </div>
+</div>
+<div class="main_container">
+    <div class="container">
+        <div class="content opacity">
+            <h1 class="content_title">Job-Winning Resume Templates</h1>
+            <p class="content_para">Get the job 2X as fast. Choose from dozens of recruiter-approved templates. Click to add ready-to-use skills and phras to your templates.</p>
+
+            <a href="#templates" class="resume_link">Create My Resume Now</a>
+
+        </div>
+        <div class="resume_temp">
+            <img src="{% static 'assets/resume_temp.jpg' %}" alt="" class="resume_img">
+            <img src="{% static 'assets/resume_temp2.jpg' %}" alt="" class="resume_img2">
+        </div>
+    </div>
+</div>
+<hr class="horiz opacity">
+<div class="features_content">
+    <h1 style="margin-bottom: 40px;" class="features_tittle opacity">Features</h1>
+    <div class="features">
+        
+        <div class="feature1 one opacity">
+            <img src="{% static 'assets/chip.png' %}" alt="" class="feature_img"></i>
+            <h2>Powerful resume builder</h2>
+            <p>Use our potent createion tools and expert guidance to create the perfect resume for your next job application</p>
+        </div>
+
+        <div class="feature1 one opacity">
+            <img src="{% static 'assets/profes.png' %}" alt="" class="feature_img"></i>
+            <h2>Professional templates</h2>
+            <p>Choose from 25+ applicant tracking systems (ATS)-friendly modern and professional templates.</p>
+        </div>
+
+        <div class="feature1 one opacity">
+            <img src="{% static 'assets/lettering.png' %}" alt="" class="feature_img"></i>
+            <h2>Customize fonts and colors</h2>
+            <p>Select custom fonts and colors on any resume template.</p>
+        </div>
+
+        <div class="feature1 two opacity">
+            <img src="{% static 'assets/cv.png' %}" alt="" class="feature_img"></i>
+            <h2>Free resume examples</h2>
+            <p>Use our potent createion tools and expert guidance to create the perfect resume for your next job application</p>
+        </div>
+
+        <div class="feature1 two opacity">
+            <img src="{% static 'assets/talent-search.png' %}" alt="" class="feature_img"></i>
+            <h2>ATS-friendly templates</h2>
+            <p>Sail through applicant tracking systems with resume templates that appeal to both machines and humans.</p>
+        </div>
+
+        <div class="feature1 two opacity">
+            <img src="{% static 'assets/competence.png' %}" alt="" class="feature_img"></i>
+            <h2>Expert tips and guidance</h2>
+            <p>Get help every step of the way as you build your resume with expert tips and suggested phrases.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="resume_templates">
+        <h2 id="templates" class="temp_title opacity">Select Templates</h2>
+
+        <div class="template_imgs">
+            <!-- <a href="{% url 'getvalue' 1 %}"><img src="{% static 'assets/resume1.png' %}" alt="resume_template" class="img1 opacity"></a> -->
+            <a href="{% url 'getvalue' 2 %}"><img src="{% static 'assets/resume2.png' %}" alt="resume_template" class="img2 opacity"></a>
+            <a href="{% url 'getvalue' 3 %}"><img src="{% static 'assets/resume3.png' %}" alt="resume_template" class="img3 opacity"></a>
+            <a href="{% url 'getvalue' 4 %}"><img src="{% static 'assets/resume4.png' %}" alt="resume_template" class="img4 opacity"></a>
+            <!-- <a href="{% url 'getvalue' 5 %}"><img src="{% static 'assets/resume5.png' %}" alt="resume_template" class="img5 opacity"></a> -->
+        </div>
+    </div>
+
+    <footer>
+        <h3>©2024, NOW Limited. All rights reserved.</h3>
+    </footer>
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="{% static 'scripts/index.js' %}"></script>
+
+
+
+</body>
+</html>
+  
+   

@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input_Field</title>
+    <link rel="stylesheet" href="{% static 'css/input.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+{% if id == 1 %}
+    <form action="/resume/temp_1/" method="POST">
+    
+{% elif id == 2 %}
+    <form action="/resume/temp_2/" method="POST">
+    
+{% elif id == 3 %}
+    <form action="/resume/temp_3/" method="POST">
+    
+{% elif id == 4 %}
+    <form action="/resume/temp_4/" method="POST">
+{% elif id == 5 %}
+    <form action="/resume/temp_5/" method="POST">
+{% endif %}
+
+   {% csrf_token %}
+
+    <div class="personale_details">
+        <h2>Details</h2>
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Name" name="name"></td> 
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="Phone" name="phone"></td> 
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="Email" name="mail"></td> 
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="Address" name="address"></td> 
+            </tr>
+        </table>
+    </div>
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <input type="text" name="summary" id="" class="sum">
+    </div>
+
+    <!-- education -->
+
+    <div class="education_container">
+
+        <h2>Education 1</h2>
+        <table class="tbody">
+            <tr>
+                <td colspan="2"><input type="text" placeholder="Education" class="education" name="education"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="text" placeholder="School" class="school" name="school"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="Start" class="start" name="yearstart"></td> 
+                <td><input type="text" placeholder="End" class="end" name="yearend"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="education_container">
+
+        <h2>Education 2</h2>
+        <table class="tbody">
+            <tr>
+                <td colspan="2"><input type="text" placeholder="Education" class="education" name="education1"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="text" placeholder="School" class="school" name="school1"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="Start" class="start" name="yearstart1"></td> 
+                <td><input type="text" placeholder="End" class="end" name="yearend1"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- skills -->
+    <div class="skills">
+        <h2>Skills</h2>
+       
+      <input type="text" class="skill" placeholder="" name="skill">
+        
+        
+    </div>
+
+    <!-- certification -->
+
+    <div class="certificate">
+        <h2>Certificate</h2>
+       
+        <input type="text" class="role" placeholder="Role" name="role">
+        <input type="text" name="about_role" id="" class="about_role" placeholder="about_role">
+    </div>
+
+    <!-- experience -->
+
+    <div class="experience">
+        <h2>PROJECTS 1</h2>
+
+        <table>
+            <tr>
+                <td ><input type="text" class="position" placeholder="Project_title" name="project"></td>
+            </tr>
+
+            <tr>
+                <td ><input type="text" class="c_name" placeholder="technologies" name="technology"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="point1" id="" class="start1" placeholder="1" ></td>
+                
+            </tr>
+
+            <tr>
+                <td><input type="text" class="end1" placeholder="2" name="point2"></td> 
+            </tr>
+
+            <tr>
+                <td><input type="text" class="about_company" name="point3" placeholder="3"></td>
+            </tr>
+        </table>
+       
+    </div>
+
+    <div class="experience">
+        <h2>PROJECTS 2</h2>
+
+        <table>
+            <tr>
+                <td ><input type="text" class="position" placeholder="Project_title" name="project1"></td>
+            </tr>
+
+            <tr>
+                <td ><input type="text" class="c_name" placeholder="technologies" name="technology1"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="point11" id="" class="start1" placeholder="1" ></td>
+                
+            </tr>
+
+            <tr>
+                <td><input type="text" class="end1" placeholder="2" name="point21"></td> 
+            </tr>
+
+            <tr>
+                <td><input type="text" class="about_company" name="point31" placeholder="3"></td>
+            </tr>
+        </table>
+       
+    </div>
+
+    <!-- language -->
+
+    <div class="language">
+        <h2>Language</h2>
+        <div class="lang_div">
+      <input type="text" class="lang" placeholder="" name="language">
+        </div>
+       
+    </div>
+
+    <div class="submit_btn">
+        <button type="submit" class="s_btn">Submit</button>
+    </div>
+</form>
+</body>
+</html>

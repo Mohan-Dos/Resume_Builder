@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'css/resume2.css' %}">
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1>{{name}}</h1>
+        </div>
+        <div class="content">
+            <div class="left-column">
+                <section class="contact">
+                    <h3>CONTACT</h3>
+                    <p>📞 {{phone}}</p>
+                    <p>📧 {{mail}}</p>
+                    <p>🌐 www.reallygreatsite.com</p>
+                    <p>📍 {{address}}</p>
+                </section>
+
+                <hr>
+
+                <section class="skills">
+                    <h3>SKILLS</h3>
+                    <ul>
+                        {% for i in skill %}
+                        <li>{{i}}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+<hr>
+                <section class="education">
+                    <h3>EDUCATION</h3>
+                    <p style="font-weight: bold;">{{education}}</p>
+                    <p>{{school}}</p>
+                    <p>{{yearstart}}-{{yearend}}</p>
+                    
+
+                    <p style="font-weight: bold;">{{education1}}</p>
+                    <p>{{school1}}</p>
+                    <p>{{yearstart1}}-{{yearend1}}</p>
+                    
+                </section>
+<hr>
+                <section class="languages">
+                    <h3>LANGUAGES</h3>
+                    {% for i in language %}
+                    <p>{{i}}</p>
+                    {% endfor %}
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="profile">
+                    <h3>PROFILE</h3>
+                    <p>{{summary}}</p>
+                </section>
+<hr>
+                <section class="experience">
+                    <h3>PROJECTS</h3>
+                    <div class="job">
+                        <h4>PROJECT -1 {{project}}</h4>
+                        <p>({{technology}})</p>
+                        
+                        <ul>
+                            {% if point1|length > 0 %}
+                            <li>{{point1}}</li>
+                            {% endif %}
+                            {% if point2|length > 0 %}
+                            <li>{{point2}}</li>
+                            {% endif %}
+                            {% if point3|length > 0 %}
+                            <li>{{point3}}</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h4>PROJECT -2 {{project1}}</h4>
+                        <p>({{technology1}})</p>
+                        
+                        <ul>
+                            {% if point11|length > 0 %}
+                    <li>{{point11}}</li>
+                    {% endif %}
+                    {% if point21|length > 0 %}
+                    <li>{{point21}}</li>
+                    {% endif %}
+                    {% if point31|length > 0 %}
+                    <li>{{point31}}</li>
+                    {% endif %}
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="job">
+                        <h4>CERTIFICATIONS</h4>
+                        <ul>
+                            <li>{{about_role}}</li>  
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+    <div class="btn">
+        <button id="btn">download</button>
+    </div>
+    
+    <script src="{% static 'scripts/pdf_print.js' %}"></script>
+</body>
+</html>

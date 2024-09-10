@@ -1,0 +1,166 @@
+body{
+   font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    
+ }
+ .poppins-thin {
+   font-family: "Poppins", sans-serif;
+   font-weight: 100;
+   font-style: normal;
+ }
+
+ /* details */
+ .personale_details{
+    padding: 20px;
+     background-color: #ffffff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     margin: 50px auto;
+     width: 210mm;
+ }
+ .personale_details input{
+    width: 750px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    margin: 10px 0px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+
+ }
+ .personale_details input:focus{
+     border: 1px solid rgb(92, 194, 228);
+     outline: none;
+ }
+
+ /* summary */
+ textarea{
+    width: 750px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    margin: 10px 0px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+ }
+
+ textarea:focus{
+    border: 1px solid rgb(92, 194, 228);
+    outline: none;
+ }
+ .summary{
+   padding: 20px;
+     background-color: #ffffff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     margin: 50px auto;
+     width: 210mm;
+ }
+
+ /* education */
+
+ .education_container, .experience, .certificate{
+   padding: 20px;
+   background-color: #ffffff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   margin: 50px auto;
+   width: 210mm;
+ }
+
+ .education, .position, .c_name, .role, .about_role, .about_company, .sum, .start1, .end1{
+   width: 750px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    margin: 10px 0px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+ }
+
+ .school{
+   width: 750px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    margin: 10px 0px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+ }
+
+ .start, .end{
+   width: 350px;
+   height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    margin: 10px 0px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+ }
+
+ .btn{
+   width: 100px;
+   height: 30px;
+   border-radius: 5px;
+   border: 1px solid saddlebrown;
+   background-color: black;
+   color: white;
+   cursor: pointer;
+ }
+
+ /* skills */
+
+ .skills, .language{
+   padding: 20px;
+   background-color: #ffffff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   margin: 50px auto;
+   width: 210mm;
+ }
+ .skill, .lang{
+   width: 750px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    margin: 10px 0px;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+ }
+ .submit_btn{
+  width: 100px;
+  margin: 40px auto ;
+ 
+
+ }
+ .s_btn{
+   padding: 10px;
+   width: 100%;
+   border-radius: 5px;
+   background-color: lightgreen;
+   color: black;
+   border: none;
+   font-weight: bolder;
+   font-size: 15px;
+   cursor: pointer;
+ }

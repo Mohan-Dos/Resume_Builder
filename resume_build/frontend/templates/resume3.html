@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'css/resume3.css' %}">
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1>{{name}}</h1>
+            <p>{{address}} • {{phone}} • {{mail}} • www.reallygreatsite.com</p>
+        </div>
+
+        <div class="section">
+            <h2>PROFILE</h2>
+            <p>{{summary}}</p>
+        </div>
+
+        <div class="section">
+            <h2>PROJECTS</h2>
+            <div class="job">
+                <h3>PROJECT -1 {{project}}</h3>
+                <h4>({{technology}})</h4>
+                <ul>
+                    {% if point1|length > 0 %}
+                    <li>{{point1}}</li>
+                    {% endif %}
+                    {% if point2|length > 0 %}
+                    <li>{{point2}}</li>
+                    {% endif %}
+                    {% if point3|length > 0 %}
+                    <li>{{point3}}</li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>PROJECT -2{{project1}}</h3>
+                <h4>({{technology1}})</h4>
+                <ul>
+                    {% if point11|length > 0 %}
+                    <li>{{point11}}</li>
+                    {% endif %}
+                    {% if point21|length > 0 %}
+                    <li>{{point21}}</li>
+                    {% endif %}
+                    {% if point31|length > 0 %}
+                    <li>{{point31}}</li>
+                    {% endif %}
+                </ul>
+            </div>
+<hr>
+            <div class="job">
+                <h2>CERTIFICATION</h2>
+                <h3>{{role}}</h3>
+                <ul>
+                    <li>{{about_role}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EDUCATION</h2>
+            <div class="education-item">
+                <h3>{{education}}<span>{{yearstart}} - {{yearend}}</span></h3>
+                <p>{{school}}</p>
+            </div>
+            <div class="education-item">
+                <h3>{{education1}}<span>{{yearstart1}} - {{yearend1}}</span></h3>
+                <p>{{school1}}</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>SKILLS</h2>
+            
+            <ul>
+                {% for i in skill %}
+                <li>{{i}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section"></div>
+            <h2>LANGUAGES</h2>
+            
+            <ul>
+                {% for i in language %}
+                <li>{{i}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="btn">
+        <button id="btn">download</button>
+    </div>
+    <script src="{% static 'scripts/pdf_print.js' %}"></script>
+</body>
+</html>

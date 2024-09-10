@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Landing Page</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+</head>
+<body>
+    <div class="header">
+
+        <div class="left_content">
+            <img src="{% static 'assets/resume.gif' %}" alt="" class="logo_img">
+            <h1> Resume </h1>
+            <span class="span"> <br>-- Builder --</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to Our Resume Builder Application</h1>
+            <p>Create your professional resume with ease and showcase your skills.</p>
+            <div class="buttons">
+                <a href="{% url 'loginpage' %}"><button class="btn login-btn">Login</button></a>
+                <a href="{% url 'registerpage' %}"><button class="btn register-btn">Register</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

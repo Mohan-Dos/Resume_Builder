@@ -1,0 +1,125 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid snow;
+    z-index: 99;
+    background-color: snow;
+}
+.left_content{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position: relative;
+}
+.logo_img{
+    height: 80px;
+    mix-blend-mode: multiply;
+}
+.span{
+    color: green;
+    font-weight: 700;
+    font-size: 15px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    
+}
+
+/* Container */
+.container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+    margin: 50px auto;
+}
+
+/* Text Centered Content */
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Login and Register Button Styles */
+.login-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.register-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #218838;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
